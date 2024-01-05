@@ -1,0 +1,13 @@
+import { logo_url } from "../utils/constants";
+
+const Header = () => {
+  return (
+    <div className="absolute bg-gradient-to-b from-black px-8 py-2 z-10">
+      <img 
+       className="w-44  "
+        src={logo_url} alt="logo" ></img>
+    </div>
+  );
+};
+
+export default Header;
