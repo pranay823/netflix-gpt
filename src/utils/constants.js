@@ -10,4 +10,22 @@ export const Api_Options = {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkM2QxZTY4ZjdlZWYzZDg4NGY4MjczZTc5MGQ5MzFlMSIsInN1YiI6IjY1OWQ4YTBjNjcyOGE4MDIwMWFiYjk4OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.P6SKxmsZ8UUa4kA1LlxXqX-LZJaULa3cpWyorw021bE'
     }
   };
-   
+
+export const  ImgCDN_URL  = 'https://image.tmdb.org/t/p/w500/'
+
+export const SupportedLanguages = [
+  {
+   identifier : "en",
+   name : "english"
+  },
+  {
+    identifier : "hindi",
+    name : "hindi"
+  },
+  {
+    identifier : "Spanish",
+    name : "spanish"
+  }
+]
+
+ export const Open_Ai_Key = process.env.REACT_APP_Open_Ai_Key

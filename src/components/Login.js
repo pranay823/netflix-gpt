@@ -83,12 +83,12 @@ setisSignInForm(!isSignInForm);
     <div>
       <Header/>
       <div className="absolute w-full h-full">
-        <img  className="w-full h-full"
+        <img  className="w-full h-full fixed"
           src={ login_background_img} alt="background" ></img>
       </div>
       <form 
       onSubmit={(e)=>{e.preventDefault()}}
-      className="bg-black bg-opacity-80  absolute w-3/12 mx-auto left-0 right-0 my-36 p-8 flex flex-col text-white min-h-[450px] min-w-[400px]">
+      className="bg-black bg-opacity-80  absolute w-3/12 mx-auto left-0 right-0 my-36 p-8 flex flex-col text-white min-h-[450px] min-w-[300px] ">
         <h1 className="text-3xl font-medium mb-8">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
        { !isSignInForm && <input ref={firstName}  type="text" placeholder="First Name" className="p-2 m-2 bg-grey h-[48px] rounded-md text-light-gray"></input>}
        { !isSignInForm && <input ref={lastName} type="text" placeholder="Last Name" className="p-2 m-2 bg-grey h-[48px] rounded-md text-light-gray"></input>}

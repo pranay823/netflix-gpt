@@ -1,22 +1,31 @@
-import React, { useEffect } from 'react'
 import Header from './Header';
-import { Api_Options } from '../utils/constants';
+import useNowPlayingMovies from '../Hooks/useNowPlayingMovies';
+import usePopularMovies from '../Hooks/usePopularMovies'
+import MainContainer from './MainContainer';
+import SecondaryContainer from './SecondaryContainer';
+import useTopRatedMovies from '../Hooks/useTopRatedMovies';
+import useUpcomingMovies from '../Hooks/useUpcomingMovies';
+import GptSearch from './GptSearch';
+import { useSelector } from 'react-redux';
+
+
 
 const Browse = () => {
-
-  const getNowPlayingMovies = async ()=>{
-    const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1',Api_Options);
-    const json =await data.json();
-    console.log(json);
-  }
-
-  useEffect(()=>{
-  getNowPlayingMovies();
-  },[])
+  const showGptSearch = useSelector(store=> store.gpt.showGptSearch)
+   useNowPlayingMovies()
+   usePopularMovies()
+   useTopRatedMovies()
+   useUpcomingMovies()
 
   return (
     <div>
         <Header /> 
+       { showGptSearch ? <GptSearch /> : 
+       <>
+        <MainContainer />
+        <SecondaryContainer />
+       </>
+      }
     </div>
   )
 }
