@@ -68,7 +68,7 @@ const Header = ( ) =>{
      <div onClick={hamburgerClickHandler} className="bg-red-700 absolute end-8 text-5xl top-9 z-40 md:hidden">
       <GiHamburgerMenu />
       </div>
-    <div className={`bg-black p-6 md:p-0 md:bg-none   absolute   w-full md:w-auto right-0   md:mr-24 md:h-12 h-48  mt-5 flex  md:flex-row flex-col transition-all ease-in duration-500 md:opacity-100  ${open ? 'opacity-100':' absolute top-[-1000px] opacity-0'}  `}>
+    <div className={`bg-black p-6 md:p-0 md:bg-none     w-full md:w-auto   md:mr-24 md:h-12 h-48  mt-5 flex  md:flex-row flex-col transition-all ease-in duration-500 md:opacity-100  ${open ? 'opacity-100':' absolute top-[-1000px] opacity-0'}  `}>
      {showGptSearch && <select className="mb-2 md:mb-0 md:mr-2 p-2  " onChange={languageHandler}>
        {SupportedLanguages.map((lang)=> <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
       </select> }
