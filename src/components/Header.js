@@ -73,7 +73,7 @@ const Header = ( ) =>{
        {SupportedLanguages.map((lang)=> <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
       </select> }
       <button onClick={gptSearchHandler}
-      className=" text-offwhite font-bold p-2  bg-red-600 md:mr-2">GPTSearch</button>
+      className=" text-offwhite font-bold p-2  bg-red-600 md:mr-2">{showGptSearch?"Homepage":"GptSearch"}</button>
 
       <button onClick={signoutHandler} className=" text-offwhite font-bold bg-red-600 p-2 md:mt-0 mt-2  " >Sign out</button>
       </div> </div>)}
